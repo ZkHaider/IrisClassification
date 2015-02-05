@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IrisClassification</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- MainActivity -->
+    <string name="title">Iris Classification Study</string>
+    <string name="description">K-Nearest Neighbor Machine Learning Application</string>
+    <string name="begin_study">Begin Study</string>
+    <string name="author">By: ZkHaider</string>
+
+    <!-- TrainOrPredict -->
+    <string name="train">Train</string>
+    <string name="predict">Predict</string>
+
+    <!-- Predict -->
+    <string name="row_title">Sample Iris</string>
+
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:src="@drawable/ic_irisicon"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/imageView" />
+
+    <TextView
+        android:text="@string/row_title"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_above="@+id/sepalLength" />
+
+    <TextView
+        android:id="@+id/sepalLength"
+        android:textStyle="bold"
+        android:text="0"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/sepalWidth"
+        android:textStyle="bold"
+        android:text="0"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_toEndOf="@+id/sepalLength" />
+
+    <TextView
+        android:id="@+id/petalLength"
+        android:textStyle="bold"
+        android:text="0"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/sepalWidth"
+        android:layout_alignBottom="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/petalWidth"
+        android:textStyle="bold"
+        android:text="0"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/petalLength"
+        android:layout_alignBottom="@+id/imageView" />
+
+</RelativeLayout>

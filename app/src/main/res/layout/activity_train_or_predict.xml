@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/fbutton_color_belize_hole"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <info.hoang8f.widget.FButton
+        android:text="@string/train"
+        fbutton:buttonColor="@color/fbutton_color_alizarin"
+        fbutton:cornerRadius="3dp"
+        fbutton:shadowHeight="3dp"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowColor="@color/fbutton_color_asbestos"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/trainButton" />
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/predictButton"
+        android:text="@string/predict"
+        fbutton:buttonColor="@color/fbutton_color_alizarin"
+        fbutton:cornerRadius="3dp"
+        fbutton:shadowHeight="3dp"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowColor="@color/fbutton_color_asbestos"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@+id/trainButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp" />
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
