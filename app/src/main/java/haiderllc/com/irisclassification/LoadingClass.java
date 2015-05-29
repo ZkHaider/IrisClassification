@@ -8,9 +8,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import knnalgorithm.KNearestNeighbor;
-import models.Iris;
-import sampledata.SampleData;
+import haiderllc.com.irisclassification.algorithms.knnalgorithm.KNearestNeighbor;
+import haiderllc.com.irisclassification.models.Iris;
+import haiderllc.com.irisclassification.sampledata.SampleData;
 
 /**
  * Created by Haider on 10/1/2014.

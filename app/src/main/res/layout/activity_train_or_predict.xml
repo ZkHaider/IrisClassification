@@ -9,7 +9,7 @@
 
 
 
-    <info.hoang8f.widget.FButton
+    <haiderllc.com.irisclassification.ui.widget.FButton
         android:text="@string/train"
         fbutton:buttonColor="@color/fbutton_color_alizarin"
         fbutton:cornerRadius="3dp"
@@ -25,7 +25,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/trainButton" />
 
-    <info.hoang8f.widget.FButton
+    <haiderllc.com.irisclassification.ui.widget.FButton
         android:id="@+id/predictButton"
         android:text="@string/predict"
         fbutton:buttonColor="@color/fbutton_color_alizarin"

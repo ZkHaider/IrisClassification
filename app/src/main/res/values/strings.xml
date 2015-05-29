@@ -9,6 +9,11 @@
     <string name="description">K-Nearest Neighbor Machine Learning Application</string>
     <string name="begin_study">Begin Study</string>
     <string name="author">By: ZkHaider</string>
+    <string name="machine_learning_title">K-Nearest Neighbor</string>
+    <string name="introduction">Welcome to the Iris Classification Study, here we are utilizing
+     K-Nearest Neighbor to calculate distances between the lengths of sepals and petals of these
+    Iris flowers.\n\nBegin by tapping the button and training the system to generate a reading and then
+    tap the button again to go to pick an iris plant to classify.</string>
 
     <!-- TrainOrPredict -->
     <string name="train">Train</string>
