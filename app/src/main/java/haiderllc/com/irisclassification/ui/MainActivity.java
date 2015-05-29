@@ -1,9 +1,13 @@
 package haiderllc.com.irisclassification.ui;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
 
@@ -20,10 +24,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //beginStudyButton = (FButton) findViewById(R.id.beginStudyButton);
 
+        initViews();
+        initListeners();
     }
 
+    private void initViews() {
+        mTrainButton = (FloatingActionButton) findViewById(R.id.trainButton);
+        mPredictButton = (FloatingActionButton) findViewById(R.id.predictButton);
+    }
+
+    private void initListeners() {
+        mTrainButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fm = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fm.beginTransaction();
+                TrainFragment trainFragment = new TrainFragment();
+                fragmentTransaction.replace(R.id.container, trainFragment);
+                fragmentTransaction.commit();
+            }
+        });
+
+        mPredictButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Predict Button", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

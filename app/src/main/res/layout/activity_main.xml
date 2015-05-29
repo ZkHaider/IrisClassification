@@ -45,24 +45,25 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        app:fab_addButtonColorNormal="@color/colorIconsColor"
-        app:fab_addButtonColorPressed="@color/colorAccent"
-        app:fab_addButtonPlusIconColor="@color/colorSecondaryText"
-        app:fab_addButtonSize="mini"
+        app:fab_addButtonColorNormal="@color/colorAccent"
+        app:fab_addButtonColorPressed="@color/colorIconsColor"
+        app:fab_addButtonPlusIconColor="@color/colorIconsColor"
+        app:fab_addButtonSize="normal"
         app:fab_labelStyle="@style/menu_labels_style"
-        app:fab_labelsPosition="left"
         android:layout_margin="@dimen/starter_margin">
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/trainButton"
             android:layout_width="@dimen/fab_size_mini"
             android:layout_height="@dimen/fab_size_mini"
+            app:fab_size="mini"
             app:fab_colorNormal="@color/colorIconsColor"
             app:fab_icon="@drawable/ic_school_grey_700_24dp"
             app:fab_title="@string/train"/>
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/predictButton"
+            app:fab_size="mini"
             android:layout_width="@dimen/fab_size_mini"
             android:layout_height="@dimen/fab_size_mini"
             app:fab_colorNormal="@color/colorIconsColor"
@@ -71,6 +72,11 @@
 
 
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
 </RelativeLayout>

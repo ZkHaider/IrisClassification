@@ -19,6 +19,10 @@ android {
     }
 }
 
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
 dependencies {
     compile 'com.google.code.gson:gson:2.3'
     compile 'com.google.android.gms:play-services:7.5.0'
@@ -35,6 +39,7 @@ dependencies {
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.android.support:palette-v7:21.0.3'
     compile 'com.rengwuxian.materialedittext:library:1.8.3'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.1.0'
     compile files('libs/commons-io-2.4.jar')
     compile files('libs/android-support-design.jar')
 }

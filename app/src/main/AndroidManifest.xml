@@ -9,6 +9,7 @@
         android:theme="@style/AppTheme" >
 
         <activity android:name=".ui.StartingActivity"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,9 +22,6 @@
             android:name=".ui.MainActivity"
             android:label="@string/app_name" >
         </activity>
-
-        <activity android:name=".ui.TrainOrPredictActivity"
-            android:label="@string/app_name" />
 
         <activity android:name=".LoadingClass"
             android:label="@string/app_name" />

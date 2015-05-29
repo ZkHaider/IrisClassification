@@ -10,6 +10,8 @@
     </style>
 
     <style name="menu_labels_style">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
         <item name="android:background">@drawable/fab_label_background</item>
         <item name="android:textColor">@color/colorIconsColor</item>
     </style>
