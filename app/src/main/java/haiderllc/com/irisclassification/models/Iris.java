@@ -102,7 +102,7 @@ public class Iris implements Comparable<Iris> {
     }
 
     /*
-    Calculate the distances between iris types and return that distance
+    Calculate the distances between iris types and returns that distance
     Distance includes differences between values of the sepal length and width and petal length and width.
      */
     public double calculateDistance(Iris otherIris) {

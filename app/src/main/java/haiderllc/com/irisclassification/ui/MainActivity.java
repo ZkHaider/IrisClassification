@@ -1,8 +1,7 @@
 package haiderllc.com.irisclassification.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,11 +37,8 @@ public class MainActivity extends AppCompatActivity {
         mTrainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fm = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fm.beginTransaction();
-                TrainFragment trainFragment = new TrainFragment();
-                fragmentTransaction.replace(R.id.container, trainFragment);
-                fragmentTransaction.commit();
+                Intent intent = new Intent(MainActivity.this, TrainActivity.class);
+                startActivity(intent);
             }
         });
 

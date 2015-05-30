@@ -1,5 +1,7 @@
 package haiderllc.com.irisclassification.sampledata;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -9,6 +11,8 @@ import haiderllc.com.irisclassification.models.Iris;
  * Created by Haider on 10/1/2014.
  */
 public class SampleData {
+
+    private static final String TAG = SampleData.class.getSimpleName();
 
     static final String[] IrisData = {
             "5.1,3.5,1.4,0.2,Iris-setosa" ,
@@ -177,6 +181,9 @@ public class SampleData {
             // Grab values from that line and store it into a Iris ArrayList Item
             irises.add(i, new Iris(i, numbers[0], numbers[1], numbers[2], numbers[3], numbers[4]));
         }
+
+        for (Iris iris : irises)
+            Log.d(TAG, iris.getIrisClassName());
 
         return irises;
     }

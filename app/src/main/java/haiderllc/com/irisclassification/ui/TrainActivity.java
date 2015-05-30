@@ -4,6 +4,7 @@ package haiderllc.com.irisclassification.ui;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,12 +15,16 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.Highlight;
 
+import java.util.ArrayList;
+
 import haiderllc.com.irisclassification.R;
+import haiderllc.com.irisclassification.models.Iris;
+import haiderllc.com.irisclassification.sampledata.SampleData;
 
 /**
  * Created by Haider on 9/24/2014.
  */
-public class TrainFragment extends Fragment {
+public class TrainActivity extends AppCompatActivity {
 
     private static final int MAX_VISIBLE_COUNT = 200;
 
@@ -29,25 +34,19 @@ public class TrainFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    }
+        setContentView(R.layout.activity_train);
 
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        ArrayList<Iris> irises = SampleData.generateTrainingList();
 
-        View root = inflater.inflate(R.layout.fragment_train, null);
-
-        initViews(root);
+        initViews();
         initListeners();
-
-        return root;
     }
 
-    private void initViews(View root) {
-        mBubbleChartLayout = (RelativeLayout) root.findViewById(R.id.bubbleChartLayout);
+    private void initViews() {
+        mBubbleChartLayout = (RelativeLayout) findViewById(R.id.bubbleChartLayout);
 
         // Programmatically create a bubble chart
-        mBubbleChart = new BubbleChart(getActivity());
+        mBubbleChart = new BubbleChart(this);
         mBubbleChartLayout.addView(mBubbleChart);
         mBubbleChart.invalidate();
     }
@@ -74,7 +73,7 @@ public class TrainFragment extends Fragment {
             @Override
             public void onNothingSelected() {
                 // Do nothing
-                
+
             }
         });
     }
